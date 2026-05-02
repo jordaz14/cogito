@@ -246,26 +246,6 @@ Check the resumability of each card the same way as philosophy files — if it a
 
 ---
 
-## Section 8 — Daily Briefing
-
-Ask:
-- What email address should the morning briefing go to?
-- What time would you like to receive it?
-
-Tell the user:
-
-> "After setup completes, run `scripts/install-briefing.sh` to configure the scheduler. It will ask for your Gmail app password to send the briefing — this is stored in your system keychain, never in any file."
-
-Write the email and time to a config block at the bottom of `CLAUDE.md`:
-
-```
-## Briefing Config
-- Email: [address]
-- Time: [time]
-```
-
----
-
 ## Finishing Up
 
 After all sections are complete, confirm:
@@ -274,14 +254,12 @@ After all sections are complete, confirm:
 2. All five philosophy files are populated with real answers
 3. All five agent `## Expert Framework` sections are filled in
 4. Any reference cards the user opted into are populated
-5. Briefing config is written to `CLAUDE.md`
 
 Then tell the user:
 
-> "Setup is complete. Three things to do next:
+> "Setup is complete. Two things to do next:
 >
-> 1. Run `scripts/install-briefing.sh` to activate your morning briefing
-> 2. Run `/year` to set your annual goals — then `/month` and `/week` to cascade them down
-> 3. You're live — ask about any domain and the right advisor will engage with full context on you
+> 1. Run `/year` to set your annual goals — then `/month` and `/week` to cascade them down
+> 2. You're live — ask about any domain and the right advisor will engage with full context on you
 >
-> You can return to `/setup` at any time to update any section, recalibrate an expert framework, or fill in a reference card you skipped."
+> Run `/checkin` any morning for your daily briefing. You can return to `/setup` at any time to update any section, recalibrate an expert framework, or fill in a reference card you skipped."

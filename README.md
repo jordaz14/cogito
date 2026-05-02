@@ -12,16 +12,13 @@ Cogito is a structured life OS with five domains — Professional, Financial, He
 
 At setup, you walk through each domain in a conversational session. The system searches for real experts whose frameworks match what you described, you pick one per domain, and that expert becomes the lens your advisor uses — not a generic template.
 
-From there, a hierarchy of goal-setting skills keeps everything coherent: yearly objectives anchor monthly OKRs, which anchor weekly priorities. A daily briefing lands in your inbox each morning: what's on your calendar, where a goal stands, and one thing the system noticed that you probably haven't.
+From there, a hierarchy of goal-setting skills keeps everything coherent: yearly objectives anchor monthly OKRs, which anchor weekly priorities. Run `/checkin` any morning for a 90-second briefing: what's on your calendar, where a goal stands, and one thing the system noticed that you probably haven't.
 
 ---
 
 ## What you need
 
 - A [Claude](https://claude.ai) account with [Claude Code](https://claude.ai/code) installed
-- An [Anthropic API key](https://console.anthropic.com) (for the daily briefing)
-- Python 3.10+ (for the briefing script)
-- A Gmail account with an [app password](https://support.google.com/accounts/answer/185833) configured (for sending the briefing)
 - macOS, Windows, or Linux
 
 ---
@@ -57,19 +54,10 @@ This is a 15–20 minute conversational session. It will:
 - Write a personalized `CLAUDE.md` with your full context
 - Seed each domain's philosophy file in your voice
 - Search for and calibrate an expert framework for each advisor
-- Ask where to send your daily briefing
 
 You can stop at any point and pick up where you left off — `/setup` resumes from the first incomplete section.
 
-**4. Install the daily briefing**
-
-```bash
-bash scripts/install-briefing.sh
-```
-
-Follow the prompts. Your API key and Gmail credentials are stored in your system keychain — never in any file.
-
-**5. Set your goals**
+**4. Set your goals**
 
 ```
 /year
@@ -92,51 +80,11 @@ Then `/month`, then `/week`. Each is blocked until its parent exists.
 
 ---
 
-## Daily briefing
-
-The briefing arrives at your configured time every morning. Three sections, 90 seconds to read:
-
-**Today** — calendar events and one action item if relevant
-
-**Goal Spotlight** — one monthly OKR, its status, one action for today
-
-**One Signal** — something the system noticed: a goal that's drifted, a conflict, a pattern across domains
-
-The briefing requires your machine to be on or in sleep mode — it runs locally via launchd (Mac), Task Scheduler (Windows), or cron (Linux). See [Scheduling on Windows and Linux](#scheduling-on-windows-and-linux) below.
-
----
-
 ## How memory works
 
 At the end of every session, Cogito automatically extracts what's worth remembering and appends it to the relevant domain's `memory.md`. No manual journaling required. The longer you use it, the more context it carries.
 
 Memory files are excluded from `.gitignore` by default — they're personal data that should stay on your machine.
-
----
-
-## Scheduling on Windows and Linux
-
-**Windows — Task Scheduler**
-
-1. Open Task Scheduler → Create Basic Task
-2. Set trigger: Daily at your preferred time
-3. Action: Start a program
-   - Program: `python`
-   - Arguments: `C:\path\to\cogito\scripts\daily-briefing.py`
-4. Store credentials using Windows Credential Manager instead of Keychain — you'll need to modify `daily-briefing.py` to use `keyring` instead of the `security` CLI
-
-**Linux — cron**
-
-```bash
-crontab -e
-```
-
-Add:
-```
-30 7 * * * /usr/bin/python3 /path/to/cogito/scripts/daily-briefing.py
-```
-
-Store credentials using `secret-tool` (GNOME Keyring) or `keyring` Python library, and update `daily-briefing.py` accordingly.
 
 ---
 
@@ -152,6 +100,7 @@ cogito/
   professional/
     philosophy.md              — your professional values and principles
     memory.md                  — running context (gitignored)
+    other/profile.md           — current role and skills (optional)
   financial/
     philosophy.md
     memory.md
@@ -163,6 +112,7 @@ cogito/
   growth/
     philosophy.md
     memory.md
+    other/reading.md           — reading list and taste (optional)
   social-life/
     philosophy.md
     memory.md
@@ -171,9 +121,6 @@ cogito/
     skills/                    — setup, year, month, week, checkin, decision
     hooks/                     — session-memory auto-capture
     settings.json
-  scripts/
-    daily-briefing.py
-    install-briefing.sh
 ```
 
 ---
