@@ -209,7 +209,44 @@ Present and confirm as above. After selection, update `.claude/agents/social-adv
 
 ---
 
-## Section 7 — Daily Briefing
+## Section 7 — Reference Cards (Optional)
+
+Reference cards are factual snapshots your advisors read for specific context. They're separate from philosophy (your values) and memory (your history) — they're the current facts your advisors need to give concrete advice.
+
+Ask:
+
+> "There are four optional reference cards that give your advisors richer context. They take about 5 minutes to set up and make a meaningful difference in the specificity of advice you get. Want to set them up now, or skip and fill them in later?"
+
+If the user wants to proceed, work through each card with a few targeted questions. Write in their voice, keep it factual and current.
+
+**Professional profile** (`professional/other/profile.md`):
+- What's your current role and what do you actually do day-to-day?
+- What are you genuinely strong at — specifically?
+- What are you actively building or working on outside your day job?
+- Anything open — job search, applications, skills in progress?
+
+**Financial profile** (`financial/other/profile.md`):
+- Current income and any expected changes?
+- Rough net worth and how it's split — liquid, retirement, other?
+- What accounts do you have and what are they for?
+- Any open financial items — rollovers, consolidations, things unresolved?
+
+**Cooking & nutrition** (`health-fitness/other/cooking.md`):
+- What's your kitchen setup — fridge size, budget, primary store?
+- How many meals do you need to cover each week?
+- How much time are you willing to spend cooking? Any dietary restrictions?
+- Anything you already make regularly that works well?
+
+**Reading** (`growth/other/reading.md`):
+- What are you currently reading?
+- What's next on your list?
+- What kinds of books actually move you — and what do you avoid?
+
+Check the resumability of each card the same way as philosophy files — if it already contains real answers, skip it or offer to update.
+
+---
+
+## Section 8 — Daily Briefing
 
 Ask:
 - What email address should the morning briefing go to?
@@ -236,14 +273,15 @@ After all sections are complete, confirm:
 1. `CLAUDE.md` is personalized
 2. All five philosophy files are populated with real answers
 3. All five agent `## Expert Framework` sections are filled in
-4. Briefing config is written to `CLAUDE.md`
+4. Any reference cards the user opted into are populated
+5. Briefing config is written to `CLAUDE.md`
 
 Then tell the user:
 
 > "Setup is complete. Three things to do next:
 >
 > 1. Run `scripts/install-briefing.sh` to activate your morning briefing
-> 2. Run `/goals` to set your first monthly OKRs — the system has no goals yet
+> 2. Run `/year` to set your annual goals — then `/month` and `/week` to cascade them down
 > 3. You're live — ask about any domain and the right advisor will engage with full context on you
 >
-> You can return to `/setup` at any time to update a section or recalibrate an expert framework."
+> You can return to `/setup` at any time to update any section, recalibrate an expert framework, or fill in a reference card you skipped."
