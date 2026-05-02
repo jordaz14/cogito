@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Personal instance files — never commit these
+CLAUDE.md
+goals/
+*/memory.md
+
+# Credentials
+.env
+*.plist.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editor
+.vscode/
+.idea/
