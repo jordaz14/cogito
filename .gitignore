@@ -5,7 +5,7 @@ Thumbs.db
 # Personal instance files — never commit these
 CLAUDE.md
 goals/
-*/memory.md
+**/memory.md
 
 # Credentials
 .env
