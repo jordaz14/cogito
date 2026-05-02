@@ -34,15 +34,29 @@ cd cogito
 
 Or use the GitHub template button to create a private copy under your own account.
 
-**2. Open it in Claude Code**
+**2. Add the `cogito` alias (optional but recommended)**
 
 ```bash
-claude .
+echo "alias cogito='claude $(pwd)/agent'" >> ~/.zshrc && source ~/.zshrc
 ```
 
-Or open the folder in the Claude Code desktop app.
+Using bash? Replace `~/.zshrc` with `~/.bashrc`. After this, run `cogito` from anywhere to open your advisor.
 
-**3. Run setup**
+**3. Open it in Claude Code**
+
+```bash
+cogito
+```
+
+Or, without the alias:
+
+```bash
+claude agent/
+```
+
+Or open the `agent/` folder in the Claude Code desktop app.
+
+**4. Run setup**
 
 ```
 /setup
@@ -57,7 +71,7 @@ This is a 15–20 minute conversational session. It will:
 
 You can stop at any point and pick up where you left off — `/setup` resumes from the first incomplete section.
 
-**4. Set your goals**
+**5. Set your goals**
 
 ```
 /year
@@ -112,35 +126,42 @@ Memory files are excluded from `.gitignore` by default — they're personal data
 
 ```
 cogito/
-  CLAUDE.md                    — your personalized context (gitignored)
-  goals/                       — goal files (gitignored)
-    2026.md                    — yearly objectives
-    2026-05.md                 — monthly OKRs
-    2026-W18.md                — weekly priorities
-  professional/
-    philosophy.md              — your professional values and principles
-    memory.md                  — running context (gitignored)
-    other/profile.md           — current role and skills (optional)
-  financial/
-    philosophy.md
-    memory.md
-    other/profile.md           — account details (optional)
-  health-fitness/
-    philosophy.md
-    memory.md
-    other/cooking.md           — meal prep context (optional)
-  growth/
-    philosophy.md
-    memory.md
-    other/reading.md           — reading list and taste (optional)
-  social-life/
-    philosophy.md
-    memory.md
-  .claude/
-    agents/                    — five domain advisors
-    skills/                    — setup, year, month, week, checkin, decision
-    hooks/                     — session-memory auto-capture
-    settings.json
+  agent/                       — open this folder in Claude Code
+    CLAUDE.md                  — your personalized context (gitignored)
+    goals/                     — goal files (gitignored)
+      2026.md                  — yearly objectives
+      2026-05.md               — monthly OKRs
+      2026-W18.md              — weekly priorities
+    professional/
+      philosophy.md            — your professional values and principles
+      memory.md                — running context (gitignored)
+      other/profile.md         — current role and skills (optional)
+    financial/
+      philosophy.md
+      memory.md
+      other/profile.md         — account details (optional)
+    health-fitness/
+      philosophy.md
+      memory.md
+      other/cooking.md         — meal prep context (optional)
+    growth/
+      philosophy.md
+      memory.md
+      other/reading.md         — reading list and taste (optional)
+    social-life/
+      philosophy.md
+      memory.md
+    .claude/
+      agents/                  — five domain advisors
+      skills/                  — setup, year, month, week, checkin, decision
+      hooks/                   — session-memory auto-capture
+      settings.json
+  me/                          — free-use personal space (gitignored content)
+    professional/
+    financial/
+    health-fitness/
+    growth/
+    social-life/
 ```
 
 ---
