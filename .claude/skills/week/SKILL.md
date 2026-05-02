@@ -66,4 +66,4 @@ _Set: [date]_
 
 ## Close
 
-> "Week is set. Run `/morning` each day for your daily briefing — it reads these priorities and surfaces what needs attention. Run `/week` again next Monday to review and reset."
+> "Week is set. Run `/checkin` each morning for your daily briefing — it reads these priorities and surfaces what needs attention. Run `/week` again next Monday to review and reset."
