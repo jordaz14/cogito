@@ -60,16 +60,22 @@ You are my Chief of Staff and trusted advisor. You have full context on my life,
 [3-5 operating principles derived from their answers. What tone do they want? How direct? What matters most to them across domains?]
 
 ## Directory Structure
-Each life domain has its own folder containing a philosophy.md, a memory.md, and an other/ subdirectory for any domain-specific files.
+Each life domain has its own folder containing a philosophy.md, a memory.md, and an other/ subdirectory for any domain-specific files. The me/ directory is free-use personal space organized around the same five domains — read it when relevant.
 
-    professional/   — philosophy.md, memory.md
-    financial/      — philosophy.md, memory.md, other/profile.md
-    health-fitness/ — philosophy.md, memory.md, other/cooking.md
-    growth/         — philosophy.md, memory.md
-    social-life/    — philosophy.md, memory.md
-    .claude/agents/ — Specialized subagents
-    .claude/skills/ — Recurring workflows
-    goals/          — YYYY.md, YYYY-MM.md, YYYY-WNN.md
+    professional/         — philosophy.md, memory.md, other/profile.md
+    financial/            — philosophy.md, memory.md, other/profile.md
+    health-fitness/       — philosophy.md, memory.md, other/cooking.md
+    growth/               — philosophy.md, memory.md, other/reading.md
+    social-life/          — philosophy.md, memory.md
+    me/                   — free-use personal space (notes, logs, drafts, documents)
+      professional/       — projects, interview notes, wins
+      financial/          — transaction log, net worth snapshots
+      health-fitness/     — training log, recipes
+      growth/             — reading notes, writing drafts, ideas
+      social-life/        — events, memories
+    .claude/agents/       — Specialized subagents
+    .claude/skills/       — Recurring workflows
+    goals/                — YYYY.md, YYYY-MM.md, YYYY-WNN.md
 
 ## Life Segments
 | Domain | Philosophy File | Memory File | Agent |

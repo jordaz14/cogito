@@ -80,6 +80,26 @@ Then `/month`, then `/week`. Each is blocked until its parent exists.
 
 ---
 
+## The me/ directory
+
+Alongside the advisor layer, Cogito includes a `me/` directory — free-use personal space organized around the same five domains. Use it for whatever suits you: daily notes, training logs, reading notes, writing drafts, project documents. Your advisors read from `me/` when it's relevant to what you're asking.
+
+Suggested files per domain are documented in `me/README.md`.
+
+---
+
+## Reading on mobile
+
+Cogito files are plain markdown — readable on any device with a markdown viewer. Good options:
+
+**iOS:** [Obsidian](https://obsidian.md) (recommended — syncs seamlessly if you're already using it), [iA Writer](https://ia.net/writer), [Bear](https://bear.app)
+
+**Android:** [Obsidian](https://obsidian.md), [Markor](https://gsantner.net/project/markor.html), [iA Writer](https://ia.net/writer)
+
+If you store your Cogito directory in iCloud, Dropbox, or a synced folder, any of these apps will give you read access to your memory files, goals, and notes from your phone — without needing Claude Code open.
+
+---
+
 ## How memory works
 
 At the end of every session, Cogito automatically extracts what's worth remembering and appends it to the relevant domain's `memory.md`. No manual journaling required. The longer you use it, the more context it carries.
