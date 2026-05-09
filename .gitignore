@@ -2,10 +2,18 @@
 .DS_Store
 Thumbs.db
 
-# Personal instance files — never commit these
-CLAUDE.md
-goals/
-**/memory.md
+# Personal data — written by /cogito:setup, never committed
+/CLAUDE.md
+/professional/
+/financial/
+/health-fitness/
+/growth/
+/social-life/
+/goals/*.md
+!/goals/.gitkeep
+
+# Override global gitignore — template memory files should be committed
+!templates/**/memory.md
 
 # Credentials
 .env

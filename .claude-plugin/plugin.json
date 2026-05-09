@@ -1,0 +1,11 @@
+{
+  "name": "cogito",
+  "version": "0.1.0",
+  "description": "Personal chief of staff — five-domain life OS for Claude Code",
+  "author": {
+    "name": "Julian Ordaz"
+  },
+  "repository": "https://github.com/julianordaz/cogito",
+  "license": "MIT",
+  "keywords": ["life-os", "productivity", "goals", "personal", "advisor"]
+}
