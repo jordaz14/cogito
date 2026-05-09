@@ -29,7 +29,8 @@ A hierarchy of goal-setting skills keeps everything coherent: yearly objectives 
 ## Install
 
 ```bash
-claude plugin install cogito@github
+/plugin marketplace add jordaz14/cogito
+/plugin install cogito@cogito
 ```
 
 Or test locally from this repo:
