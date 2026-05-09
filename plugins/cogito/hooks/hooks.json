@@ -1,12 +1,15 @@
 {
-  "Stop": [
-    {
-      "hooks": [
-        {
-          "type": "command",
-          "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/session-memory.py"
-        }
-      ]
-    }
-  ]
+  "description": "Auto-captures session memories into domain memory files on session end",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/session-memory.py\""
+          }
+        ]
+      }
+    ]
+  }
 }
