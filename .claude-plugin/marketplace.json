@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "cogito",
-      "source": ".",
+      "source": "https://github.com/jordaz14/cogito",
       "description": "Personal chief of staff — five-domain life OS for Claude Code"
     }
   ]
