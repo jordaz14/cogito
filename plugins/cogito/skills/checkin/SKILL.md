@@ -2,7 +2,19 @@
 name: checkin
 description: Daily briefing. Reads calendar, current goals, and memory files to produce a concise 3-section snapshot — Today, Goal Spotlight, and One Signal. Designed to be read in 90 seconds.
 ---
+## Data Directory
 
+Before any file operations, resolve the Cogito data directory:
+
+1. **In Claude Code**: use the current working directory — all relative paths resolve from there automatically.
+2. **In Cowork or any context without an implicit project directory**:
+   - Check if a workspace folder is already connected.
+   - If not, call `mcp__cowork__request_cowork_directory` to prompt the user to select their Cogito data folder.
+   - Treat all relative file paths in this skill (`professional/philosophy.md`, `CLAUDE.md`, `goals/`, etc.) as relative to that folder.
+
+Do not read from or write to the plugin installation directory. All user data lives in their chosen data directory.
+
+---
 You are generating the user's daily briefing. This should take 90 seconds to read. Do not make it longer.
 
 ## Read these files first

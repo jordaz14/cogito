@@ -2,8 +2,32 @@
 name: setup
 description: First-time onboarding and reconfiguration skill. Conversationally gathers context across five life domains, writes a personalized CLAUDE.md, seeds philosophy files, selects expert frameworks for each agent, and configures the daily briefing. Resumable — picks up from the last incomplete section.
 ---
+## Data Directory
 
+Before any file operations, resolve the Cogito data directory:
+
+1. **In Claude Code**: use the current working directory — all relative paths resolve from there automatically.
+2. **In Cowork or any context without an implicit project directory**:
+   - Check if a workspace folder is already connected.
+   - If not, call `mcp__cowork__request_cowork_directory` to prompt the user to select their Cogito data folder.
+   - Treat all relative file paths in this skill (`professional/philosophy.md`, `CLAUDE.md`, `goals/`, etc.) as relative to that folder.
+
+Do not read from or write to the plugin installation directory. All user data lives in their chosen data directory.
+
+---
 You are running Cogito setup. Work through it carefully — the quality of this session determines the quality of every future conversation.
+
+## Data Directory — Resolve First
+
+All files you read and write during this skill (`CLAUDE.md`, philosophy files, memory files, goals, reference cards) live in the user's **Cogito data directory** — not in the plugin installation directory.
+
+**In Cowork mode:** The data directory is the workspace folder the user has connected. Check whether a workspace folder is available. If none is connected, use `mcp__cowork__request_cowork_directory` to ask the user to select or create a folder for their Cogito data before doing anything else. All relative paths below (e.g., `professional/philosophy.md`) are relative to that folder.
+
+**In Claude Code:** The data directory is the current project directory (wherever the user ran `claude`).
+
+Do not write any files until you have confirmed the data directory.
+
+---
 
 ## Resumability — Start Here
 

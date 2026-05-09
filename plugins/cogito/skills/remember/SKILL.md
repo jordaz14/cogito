@@ -2,7 +2,19 @@
 name: remember
 description: Append a memory to the relevant domain's memory.md. Invoke proactively when a conversation surfaces something worth carrying into future sessions — progress updates, decisions made, expressed preferences, context that would otherwise be lost on cold start.
 ---
+## Data Directory
 
+Before any file operations, resolve the Cogito data directory:
+
+1. **In Claude Code**: use the current working directory — all relative paths resolve from there automatically.
+2. **In Cowork or any context without an implicit project directory**:
+   - Check if a workspace folder is already connected.
+   - If not, call `mcp__cowork__request_cowork_directory` to prompt the user to select their Cogito data folder.
+   - Treat all relative file paths in this skill (`professional/philosophy.md`, `CLAUDE.md`, `goals/`, etc.) as relative to that folder.
+
+Do not read from or write to the plugin installation directory. All user data lives in their chosen data directory.
+
+---
 You are writing a new entry to a domain memory file.
 
 ## When to invoke this skill

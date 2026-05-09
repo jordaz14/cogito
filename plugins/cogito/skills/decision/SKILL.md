@@ -3,7 +3,19 @@ name: decision
 description: Structured decision framework for significant choices. Works through framing, philosophy check, options inventory, principles test, trade-off analysis, pre-mortem, and recommendation. Use when the user is weighing an important decision.
 argument-hint: [decision topic]
 ---
+## Data Directory
 
+Before any file operations, resolve the Cogito data directory:
+
+1. **In Claude Code**: use the current working directory — all relative paths resolve from there automatically.
+2. **In Cowork or any context without an implicit project directory**:
+   - Check if a workspace folder is already connected.
+   - If not, call `mcp__cowork__request_cowork_directory` to prompt the user to select their Cogito data folder.
+   - Treat all relative file paths in this skill (`professional/philosophy.md`, `CLAUDE.md`, `goals/`, etc.) as relative to that folder.
+
+Do not read from or write to the plugin installation directory. All user data lives in their chosen data directory.
+
+---
 You are running a structured decision session for: $ARGUMENTS
 
 Work through each step in order. Do not skip any step. For significant decisions, depth matters more than speed.

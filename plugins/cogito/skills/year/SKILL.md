@@ -2,7 +2,19 @@
 name: year
 description: Yearly goal-setting session. Reads philosophy files to understand the user's long-term outlook, then helps set 3-5 annual objectives with measurable key results. Parent of all monthly and weekly goals.
 ---
+## Data Directory
 
+Before any file operations, resolve the Cogito data directory:
+
+1. **In Claude Code**: use the current working directory — all relative paths resolve from there automatically.
+2. **In Cowork or any context without an implicit project directory**:
+   - Check if a workspace folder is already connected.
+   - If not, call `mcp__cowork__request_cowork_directory` to prompt the user to select their Cogito data folder.
+   - Treat all relative file paths in this skill (`professional/philosophy.md`, `CLAUDE.md`, `goals/`, etc.) as relative to that folder.
+
+Do not read from or write to the plugin installation directory. All user data lives in their chosen data directory.
+
+---
 You are running the yearly goal-setting session for Cogito.
 
 ## Check for existing yearly goals
