@@ -1,0 +1,14 @@
+{
+  "name": "cogito",
+  "owner": {
+    "name": "Julian Ordaz"
+  },
+  "description": "Personal chief of staff — five-domain life OS for Claude Code",
+  "plugins": [
+    {
+      "name": "cogito",
+      "source": ".",
+      "description": "Personal chief of staff — five-domain life OS for Claude Code"
+    }
+  ]
+}
