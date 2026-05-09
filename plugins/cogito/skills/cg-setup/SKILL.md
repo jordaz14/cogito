@@ -1,5 +1,5 @@
 ---
-name: setup
+name: cg-setup
 description: First-time onboarding and reconfiguration skill. Conversationally gathers context across five life domains, writes a personalized CLAUDE.md, seeds philosophy files, selects expert frameworks for each agent, and configures the daily briefing. Resumable — picks up from the last incomplete section.
 ---
 ## Data Directory
@@ -304,7 +304,7 @@ Then tell the user:
 
 > "Setup is complete. Two things to do next:
 >
-> 1. Run `/year` to set your annual goals — then `/month` and `/week` to cascade them down
+> 1. Run `/cg-year` to set your annual goals — then `/cg-month` and `/cg-week` to cascade them down
 > 2. You're live — ask about any domain and the right advisor will engage with full context on you
 >
-> Run `/checkin` any morning for your daily briefing. You can return to `/setup` at any time to update any section, recalibrate an expert framework, or fill in a reference card you skipped."
+> Run `/cg-checkin` any morning for your daily briefing. You can return to `/cg-setup` at any time to update any section, recalibrate an expert framework, or fill in a reference card you skipped."

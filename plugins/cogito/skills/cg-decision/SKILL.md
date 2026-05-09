@@ -1,5 +1,5 @@
 ---
-name: decision
+name: cg-decision
 description: Structured decision framework for significant choices. Works through framing, philosophy check, options inventory, principles test, trade-off analysis, pre-mortem, and recommendation. Use when the user is weighing an important decision.
 argument-hint: [decision topic]
 ---
@@ -53,7 +53,7 @@ Given everything above: what do you recommend, and why? Be direct. If the answer
 
 ---
 
-After the session, invoke `/remember` to log the outcome to the relevant domain's `memory.md`. Use the `[DECISION]` prefix to mark it:
+After the session, invoke `/cg-remember` to log the outcome to the relevant domain's `memory.md`. Use the `[DECISION]` prefix to mark it:
 
 ```
 **[YYYY-MM-DD] — [Domain] [DECISION]**

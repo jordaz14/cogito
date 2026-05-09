@@ -1,5 +1,5 @@
 ---
-name: checkin
+name: cg-checkin
 description: Daily briefing. Reads calendar, current goals, and memory files to produce a concise 3-section snapshot — Today, Goal Spotlight, and One Signal. Designed to be read in 90 seconds.
 ---
 ## Data Directory
@@ -26,7 +26,7 @@ You are generating the user's daily briefing. This should take 90 seconds to rea
 - Google Calendar — today's events and any urgent items this week
 
 If no goal files exist, note it at the top:
-> "No goals are configured yet. Run `/year` → `/month` → `/week` to set them up."
+> "No goals are configured yet. Run `/cg-year` → `/cg-month` → `/cg-week` to set them up."
 
 Then proceed with what's available.
 

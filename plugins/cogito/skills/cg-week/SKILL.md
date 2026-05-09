@@ -1,5 +1,5 @@
 ---
-name: week
+name: cg-week
 description: Weekly priority-setting and drift audit. Reads monthly OKRs and derives this week's 3 priorities. Also surfaces drift — where last week's commitments weren't met and why. Enforces the monthly → weekly hierarchy.
 ---
 ## Data Directory
@@ -22,7 +22,7 @@ You are running the weekly session for Cogito.
 Read `goals/[current year]-[current month].md`.
 
 If it doesn't exist or has no content:
-> "Weekly priorities need a monthly anchor to derive from. Run `/month` first to set this month's OKRs, then come back here."
+> "Weekly priorities need a monthly anchor to derive from. Run `/cg-month` first to set this month's OKRs, then come back here."
 
 Stop. Do not proceed until monthly goals exist.
 
@@ -78,4 +78,4 @@ _Set: [date]_
 
 ## Close
 
-> "Week is set. Run `/checkin` each morning for your daily briefing — it reads these priorities and surfaces what needs attention. Run `/week` again next Monday to review and reset."
+> "Week is set. Run `/cg-checkin` each morning for your daily briefing — it reads these priorities and surfaces what needs attention. Run `/cg-week` again next Monday to review and reset."

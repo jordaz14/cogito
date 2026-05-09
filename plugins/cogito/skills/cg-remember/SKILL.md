@@ -1,5 +1,5 @@
 ---
-name: remember
+name: cg-remember
 description: Append a memory to the relevant domain's memory.md. Invoke proactively when a conversation surfaces something worth carrying into future sessions — progress updates, decisions made, expressed preferences, context that would otherwise be lost on cold start.
 ---
 ## Data Directory

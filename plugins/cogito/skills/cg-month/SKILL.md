@@ -1,5 +1,5 @@
 ---
-name: month
+name: cg-month
 description: Monthly OKR-setting session. Reads yearly goals and translates them into this month's objectives and key results. Enforces the yearly → monthly hierarchy.
 ---
 ## Data Directory
@@ -22,7 +22,7 @@ You are running the monthly goal-setting session for Cogito.
 Read `goals/[current year].md`.
 
 If it doesn't exist or has no content:
-> "Monthly goals can't be set without a yearly anchor — otherwise there's nothing to derive them from. Run `/year` first to set your annual objectives, then come back here."
+> "Monthly goals can't be set without a yearly anchor — otherwise there's nothing to derive them from. Run `/cg-year` first to set your annual objectives, then come back here."
 
 Stop. Do not proceed until yearly goals exist.
 
@@ -84,4 +84,4 @@ _Set: [date]_
 
 ## Close
 
-> "Month is set. Run `/week` at the start of each week to translate these into weekly priorities. Run `/month` again anytime to adjust — goals aren't contracts, but changes should be deliberate."
+> "Month is set. Run `/cg-week` at the start of each week to translate these into weekly priorities. Run `/cg-month` again anytime to adjust — goals aren't contracts, but changes should be deliberate."

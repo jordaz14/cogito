@@ -1,5 +1,5 @@
 ---
-name: year
+name: cg-year
 description: Yearly goal-setting session. Reads philosophy files to understand the user's long-term outlook, then helps set 3-5 annual objectives with measurable key results. Parent of all monthly and weekly goals.
 ---
 ## Data Directory
@@ -80,4 +80,4 @@ _Set: [date]_
 
 ## Close
 
-> "Yearly goals are set. Run `/month` to translate these into this month's OKRs — monthly goals can't be set without the yearly anchor. Run `/year` again anytime to revisit these."
+> "Yearly goals are set. Run `/cg-month` to translate these into this month's OKRs — monthly goals can't be set without the yearly anchor. Run `/cg-year` again anytime to revisit these."
